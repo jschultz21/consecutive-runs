@@ -1,11 +1,13 @@
 var integerArray = [], indices = [];
 
 function addInteger(e) {
+  event.preventDefault()
   integerValue = document.getElementById('numberInput').value;
-  integerArray.push(integerValue);
-  document.getElementById('integerArray').innerHTML += (integerArray.length == 1 ? "" : "," ) + integerValue;
-  document.getElementById("numberInput").value = "";
-
+  if (integerValue){
+    integerArray.push(integerValue);
+    document.getElementById('integerArray').innerHTML += (integerArray.length == 1 ? "" : ", " ) + integerValue;
+    document.getElementById("numberInput").value = "";
+  }
 };
 
 var reset = function () {
@@ -13,7 +15,6 @@ var reset = function () {
   document.getElementById('integerArray').innerHTML = "";
   integerArray = [];
   indices = [];
-
 };
 
 function searchConsecutiveNumbers() {
@@ -25,10 +26,14 @@ function searchConsecutiveNumbers() {
     if (
       ((a-b == -1) && (b-c==-1) && (a-c==-2)) ||
       ((a-b==1) && (b-c==1)&&(a-c==2))
-    )
-    {
+    ){
       indices.push(i);
     }
   }
-  document.getElementById('indicesArray').innerHTML = indices;
+  if (indices.length>0){
+    document.getElementById('indicesArray').innerHTML = indices;
+  }
+  else {
+    document.getElementById('indicesArray').innerHTML = "no runs found!";
+  }
 };

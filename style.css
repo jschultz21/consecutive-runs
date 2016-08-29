@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Monaco;
+  overflow:hidden;
+  text-decoration: none;
+}
+body {
+  color: #2E282A;
+  font-size: 22px;
+  text-align:center;
+  background-color: #083D77;
+}
+
+.container {
+  margin: 0px auto;
+  width: 55%;
+  padding: 0 20px;
+  height: 100vh;
+  background-color: #EBEBD3;
+  border-left:20px solid #76B041;
+  border-right:20px solid #76B041;
+}
+
+input {
+  width: 60px;
+  font-size: 18px;
+}
+.form-group {
+  margin: 15px 0;
+}
+
+.array {
+  padding: 10px;
+  min-height: 30px;
+}
+
+
+h3 {
+  padding: 40px 0;
+  font-size:55px;
+  color: #E4572E;
+  line-height: 60px;
+}
+
+footer {
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  font-size: 15px;
+  padding: 5px;
+}
+
+button:active {
+  position:relative;
+  top:1px;
+}
+
+button {
+  border:0;
+  color: #EBEBD3;
+  font-size: 12px;
+  background: #76B041;
+  background-image: linear-gradient(to bottom, #76B041, #69993b);
+  border-radius: 15px;
+  padding: 5px 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background: #E4572E;
+  background-image: linear-gradient(to bottom, #E4572E, #d66d58);
+  text-decoration: none;
+}
+
+
+a {
+  color: #083D77;
+}
+a:visited {
+  color: #76B041;
+}
+a:hover {
+  color: #E4572E;
+}
+
+
+
+@media screen and (max-width: 650px) {
+  body {
+    font-size: 18px;
+  }
+  h3{
+    font-size: 40px;
+    line-height: 45px;
+  }
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 3px 10px;
+
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  body {
+    font-size: 14px;
+  }
+  h3{
+    font-size: 25px;
+    line-height: 38px;
+    padding: 10px 0;
+  }
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 3px 7px;
+    margin:3px;
+
+  }
+}
